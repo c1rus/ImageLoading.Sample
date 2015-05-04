@@ -18,6 +18,7 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,27 +43,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FFImageLoading.Droid">
-      <HintPath>..\packages\Xamarin.FFImageLoading.1.0.7\lib\MonoAndroid10\FFImageLoading.Droid.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.1.1\lib\MonoAndroid10\FFImageLoading.Droid.dll</HintPath>
     </Reference>
     <Reference Include="ModernHttpClient">
-      <HintPath>..\packages\modernhttpclient.2.1.5\lib\MonoAndroid\ModernHttpClient.dll</HintPath>
+      <HintPath>..\packages\modernhttpclient.2.4.0\lib\MonoAndroid\ModernHttpClient.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="OkHttp">
-      <HintPath>..\packages\modernhttpclient.2.1.5\lib\MonoAndroid\OkHttp.dll</HintPath>
+      <HintPath>..\packages\modernhttpclient.2.4.0\lib\MonoAndroid\OkHttp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.22.0.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="ImageFragment.cs" />
+    <Compile Include="PictureAdapter.cs" />
+    <Compile Include="RecyclerActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +81,11 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\fragment_image.axml" />
+    <AndroidResource Include="Resources\layout\list_item.axml" />
+    <AndroidResource Include="Resources\layout\list.axml" />
+    <AndroidResource Include="Resources\menu\options.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
